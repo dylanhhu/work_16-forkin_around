@@ -15,6 +15,7 @@ int main() {
 
     pid1 = fork();
     if (pid1) {
+        rand();  // yeah...
         pid2 = fork();
     }
     
@@ -37,7 +38,7 @@ int main() {
     else {
         printf("Child: My pid is %d!\n", getpid());
         
-        int sleep_time = (rand() % 4) + 2;  // TODO: make more random
+        int sleep_time = (rand() % 4) + 2;
         sleep(sleep_time);
 
         printf("Child: Done sleeping! (pid: %d)\n", getpid());
